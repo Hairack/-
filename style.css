@@ -855,22 +855,35 @@ input:checked + .slider:before {
 /* ==========================================================================
    Responsive Styles
    ========================================================================== */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
     .hero-container {
         grid-template-columns: 1fr;
+        gap: 32px;
     }
     .hero-image-wrapper {
         order: -1;
     }
     .hero-img {
-        height: 280px;
+        height: 320px;
+    }
+    .hero-badge {
+        bottom: 16px;
+        left: 16px;
     }
     .contacts-wrapper {
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        justify-content: center;
+        width: 100%;
+        order: 3;
+    }
     .header-container {
         flex-wrap: wrap;
         height: auto;
@@ -878,11 +891,54 @@ input:checked + .slider:before {
         padding-bottom: 12px;
         gap: 12px;
     }
-    .nav {
-        display: none; /* simple responsive hide for mobile header */
+    .calculator-box {
+        padding: 24px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
     }
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-img {
+        height: 220px;
+    }
+    .hero-badge {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: -30px;
+        margin-left: 16px;
+        margin-right: 16px;
+        width: fit-content;
+    }
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-telegram, .btn-whatsapp {
+        width: 100%;
+    }
+    .weight-input-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .weight-input-wrapper .btn-weight {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+        flex: 1 1 auto;
+        min-width: 44px;
+    }
+    .weight-input-wrapper .form-input {
+        width: 100%;
+        order: -1;
+        margin-bottom: 8px;
     }
     .calculator-actions {
         grid-template-columns: 1fr;
